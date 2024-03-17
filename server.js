@@ -6,14 +6,17 @@ const express = require('express');
 // Middleware log de eventos de express.
 const morgan = require('morgan');
 
-const app = express();
 const { PORT } = process.env;
+const getYearController = require('./controllers/getYear.js');
+const getTeamController = require('./controllers/getTeam.js');
+
+const app = express();
 
 app.use(morgan('dev'));
 
 // Rutas
-app.get('/:team', getTeamController);
 app.get('/:team/year', getYearController);
+app.get('/:team', getTeamController);
 
 // Middleware de 404
 app.use((req, res) => {
