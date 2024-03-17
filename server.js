@@ -1,6 +1,9 @@
+// Módulo que carga las variables del archivo .env en las variables de entorno
 require('dotenv').config();
 
+// Módulo para la creación de servidor http.
 const express = require('express');
+// Middleware log de eventos de express.
 const morgan = require('morgan');
 
 const app = express();
@@ -9,6 +12,8 @@ const { PORT } = process.env;
 app.use(morgan('dev'));
 
 // Rutas
+app.get('/:team', getTeamController);
+app.get('/:team/year', getYearController);
 
 // Middleware de 404
 app.use((req, res) => {
