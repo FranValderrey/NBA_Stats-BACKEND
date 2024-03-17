@@ -36,6 +36,7 @@ Sitio web donde consultar las estadísticas proporcionadas por nuestra base de d
         - rebotes_por_partido
 
 ##Endpoints
-· GET / Página principal con todos los equipos
-· GET /:name Página de cada equipo
-· GET /:name/year Página con estadísticas de esa temporada de un equipo
+
+    · GET / Página principal con todos los equipos
+    · GET /:name Página de cada equipo
+    · GET /:name/year Página con estadísticas de esa temporada de un equipo
