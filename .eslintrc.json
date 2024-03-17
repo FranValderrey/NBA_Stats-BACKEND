@@ -2,13 +2,17 @@
   "env": {
     "browser": true,
     "commonjs": true,
-    "es2021": true
+    "es2021": true,
+    "node": true // Agregamos "node": true para indicar el entorno de Node.js
   },
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaVersion": "latest"
   },
   "rules": {
-    "no-unused-vars": ["error", { "argsIgnorePatterns": "next" }]
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+  },
+  "globals": {
+    "process": true // Agregamos "process": true para permitir que ESLint reconozca process como variable global
   }
 }
