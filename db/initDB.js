@@ -21,6 +21,7 @@ async function main() {
         ciudad varchar(20) DEFAULT NULL,
         conferencia varchar(4) DEFAULT NULL,
         division varchar(9) DEFAULT NULL,
+        descripcion VARCHAR(1000),
         PRIMARY KEY (nombre));
     `);
 

@@ -7,16 +7,18 @@ const express = require('express');
 const morgan = require('morgan');
 
 const { PORT } = process.env;
-const getYearController = require('./controllers/getYear.js');
+const getInitController = require('./controllers/getInit.js');
 const getTeamController = require('./controllers/getTeam.js');
+const getYearController = require('./controllers/getYear.js');
 
 const app = express();
 
 app.use(morgan('dev'));
 
 // Rutas
-app.get('/:team/year', getYearController);
+app.get('/', getInitController);
 app.get('/:team', getTeamController);
+app.get('/:team/year', getYearController);
 
 // Middleware de 404
 app.use((req, res) => {
