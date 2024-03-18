@@ -10,6 +10,7 @@ const { PORT } = process.env;
 const getInitController = require('./controllers/getInit.js');
 const getTeamController = require('./controllers/getTeam.js');
 const getSeasonController = require('./controllers/getSeason.js');
+const getPlayerController = require('./controllers/getPlayer.js');
 
 const app = express();
 
@@ -18,7 +19,8 @@ app.use(morgan('dev'));
 // Rutas
 app.get('/', getInitController);
 app.get('/:team', getTeamController);
-app.get('/:team/season', getSeasonController);
+app.get('/:team/:season', getSeasonController);
+app.get('/:team/:season/:player', getPlayerController);
 
 // Middleware de 404
 app.use((req, res) => {
