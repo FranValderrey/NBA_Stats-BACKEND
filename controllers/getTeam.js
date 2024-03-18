@@ -9,7 +9,7 @@ const getTeamController = async (req, res, next) => {
       'SELECT * FROM Equipos WHERE nombre = ?',
       [nombreEquipo]
     );
-    await connection.end();
+    await connection.release();
 
     if (equipo.length === 0) {
       return res

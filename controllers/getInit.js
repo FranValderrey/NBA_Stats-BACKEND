@@ -4,7 +4,7 @@ const getInitController = async (req, res, next) => {
   try {
     const connection = await db.getConnection();
     const [equipos] = await connection.execute('SELECT nombre FROM Equipos');
-    await connection.end();
+    await connection.release();
 
     res.status(200).json({ status: 'success', data: equipos });
   } catch (error) {
