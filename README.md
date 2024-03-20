@@ -18,6 +18,7 @@ Sitio web donde consultar las estadísticas proporcionadas por nuestra base de d
         - ciudad
         - conferencia
         - división
+        - descripción
 
     · Partidos:
         - código(id)
@@ -39,4 +40,5 @@ Sitio web donde consultar las estadísticas proporcionadas por nuestra base de d
 
     · GET / Página principal con todos los equipos
     · GET /:name Página de cada equipo
-    · GET /:name/year Página con estadísticas de esa temporada de un equipo
+    · GET /:name/:year Página con estadísticas y jugadores en plantilla de un equipo en una temporada concreta
+    · GET /:team/:season/:player Estadísticas de un jugador en una temporada concreta
