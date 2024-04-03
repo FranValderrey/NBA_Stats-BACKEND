@@ -1,8 +1,8 @@
-#NBA_Stats BACKEND
+# NBA_Stats BACKEND
 
 Sitio web donde consultar las estadísticas proporcionadas por nuestra base de datos
 
-##Entidades
+## Entidades
 
     · Jugadores:
         - código(id)
@@ -36,7 +36,7 @@ Sitio web donde consultar las estadísticas proporcionadas por nuestra base de d
         - tapones_por_partido
         - rebotes_por_partido
 
-##Endpoints
+## Endpoints
 
     · GET / Página principal con todos los equipos
     · GET /:name Página de cada equipo
