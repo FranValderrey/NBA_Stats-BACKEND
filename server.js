@@ -5,6 +5,8 @@ require('dotenv').config();
 const express = require('express');
 // Middleware log de eventos de express.
 const morgan = require('morgan');
+// Módulo que evita conflictos en la base de datos cuando se realicen peticiones en el servidor local
+const cors = require('cors');
 
 const { PORT } = process.env;
 const getInitController = require('./controllers/getInit.js');
@@ -14,6 +16,7 @@ const getPlayerController = require('./controllers/getPlayer.js');
 
 const app = express();
 
+app.use(cors());
 app.use(morgan('dev'));
 
 // Rutas
