@@ -20,6 +20,7 @@ Sitio web donde consultar las estadísticas proporcionadas por nuestra base de d
   - ciudad
   - conferencia
   - división
+  - logo_url
   - descripción
 
 - Partidos:
